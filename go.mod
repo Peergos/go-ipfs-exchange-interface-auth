@@ -1,4 +1,4 @@
-module github.com/ipfs/go-ipfs-exchange-interface
+module github.com/peergos/go-ipfs-exchange-interface-auth
 
 go 1.16
 
