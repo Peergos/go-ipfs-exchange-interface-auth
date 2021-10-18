@@ -7,6 +7,7 @@ import (
 
 	blocks "github.com/ipfs/go-block-format"
 	cid "github.com/ipfs/go-cid"
+	auth "github.com/peergos/go-bitswap-auth/auth"
 )
 
 // Interface defines the functionality of the IPFS block exchange protocol.
@@ -15,7 +16,7 @@ type Interface interface { // type Exchanger interface
 
 	// TODO Should callers be concerned with whether the block was made
 	// available on the network?
-	HasBlock(blocks.Block) error
+	HasBlock(auth.AuthBlock) error
 
 	IsOnline() bool
 
