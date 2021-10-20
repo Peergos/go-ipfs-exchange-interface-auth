@@ -6,7 +6,6 @@ import (
 	"io"
 
 	blocks "github.com/ipfs/go-block-format"
-	cid "github.com/ipfs/go-cid"
 	auth "github.com/peergos/go-bitswap-auth/auth"
 )
 
