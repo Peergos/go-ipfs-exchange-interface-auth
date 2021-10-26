@@ -5,7 +5,6 @@ import (
 	"context"
 	"io"
 
-	blocks "github.com/ipfs/go-block-format"
 	auth "github.com/peergos/go-bitswap-auth/auth"
 )
 
@@ -25,8 +24,8 @@ type Interface interface { // type Exchanger interface
 // Fetcher is an object that can be used to retrieve blocks
 type Fetcher interface {
 	// GetBlock returns the block associated with a given key.
-	GetBlock(context.Context, auth.Want) (blocks.Block, error)
-	GetBlocks(context.Context, []auth.Want) (<-chan blocks.Block, error)
+	GetBlock(context.Context, auth.Want) (auth.AuthBlock, error)
+	GetBlocks(context.Context, []auth.Want) (<-chan auth.AuthBlock, error)
 }
 
 // SessionExchange is an exchange.Interface which supports
